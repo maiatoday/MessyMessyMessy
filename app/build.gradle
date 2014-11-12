@@ -12,7 +12,9 @@ android {
         versionName "1.0"
         ndk {
             moduleName "messy"
-            ldLibs "log"
+            ldLibs "log", "android", "EGL", "GLESv1_CM"
+
+//            LOCAL_LDLIBS    := -llog -landroid -lEGL -lGLESv1_CM
         }
     }
     buildTypes {
